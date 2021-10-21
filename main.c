@@ -1,9 +1,12 @@
 #include "libftprintf.h"
 
-#include<stdarg.h>
-#include<stdio.h>
+int	main(void)
+{
+	ft_printf("%%");
+	return (0);
+}
 
-int	sum(int firstArg, ...)
+/*int	sum(int firstArg, ...)
 {
 	int	i = firstArg;
 	int	sum = 0;
@@ -30,3 +33,4 @@ int	main(void)
 	printf("%d", sum(1, 10, 10, 1));
 	return (0);
 }
+*/
