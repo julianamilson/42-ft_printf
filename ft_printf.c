@@ -6,32 +6,36 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 18:09:36 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/22 18:20:47 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/22 18:46:46 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	get_flag(char *format, va_list ap)
+static int	get_flag(char *format, va_list argument)
 {
+	int	len;
+
+	len = 0;
 	if (*format == 'c')
-		get_c();
+		len = get_c();
 	if (*format == 's')
-		get_s();
+		len = get_s();
 	if (*format == 'p')
-		get_p();
+		len = get_p();
 	if (*format == 'd')
-		get_d();
+		len = get_d();
 	if (*format == 'i')
-		get_i();
+		len = get_i();
 	if (*format == 'u')
-		get_u();
+		len = get_u();
 	if (*format == 'x')
-		get_low_x();
+		len = get_low_x();
 	if (*format == 'X')
-		get_upper_x();
+		len = get_upper_x();
 	if (*format == '%')
-		write(1, '%', 1);
+		len = write(1, '%', 1);
+	return (len);
 }
 
 int	ft_printf(const char *format, ...)
@@ -45,11 +49,11 @@ int	ft_printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			get_flag(format++, arguments);
+			len += get_flag(format++, arguments);
 			*format++;
 		}
+		len += write (1, &format, 1);
 		*format++;
-		len++;
 	}
 	va_end(arguments);
 	return (len);
