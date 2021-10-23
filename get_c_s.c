@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:20:07 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/22 19:37:16 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/22 22:34:31 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	get_c(int c)
 	return (len);
 }
 
-int	get_s(char *s)
-{
-	int	len;
+// int	get_s(char *s)
+// {
+// 	int	len;
 
-	len = write (1, s, ft_strlen(s));
-	return (len);
-}
+// 	len = write (1, s, ft_strlen(s));
+// 	return (len);
+// }

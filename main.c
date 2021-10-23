@@ -2,7 +2,11 @@
 
 int	main(void)
 {
-	ft_printf("teste %%\n");
+	char ch = 'j';
+	ft_printf("Teste char: %c\n", ch);
+	ft_printf("-----------\n");
+
+	ft_printf("Teste %%\n");
 	ft_printf("%%oiee\n");
 	ft_printf("%%\n");
 	ft_printf("-----------\n");
