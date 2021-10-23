@@ -2,7 +2,10 @@
 
 int	main(void)
 {
-	ft_printf("%%");
+	ft_printf("teste %%\n");
+	ft_printf("%%oiee\n");
+	ft_printf("%%\n");
+	ft_printf("-----------\n");
 	return (0);
 }
 
