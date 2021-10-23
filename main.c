@@ -3,7 +3,7 @@
 
 int	main(void)
 {
-	// tests for %c
+	// // tests for %c
 	// char ch = 'j';
 	// ft_printf("Teste char: %c\n", ch);
 	// ft_printf("Teste char: %c%c%c\n", ch, ch, ch);
@@ -17,15 +17,19 @@ int	main(void)
 	// }
 	// ft_printf("-----------\n");
 
-	// tests for %s
+	// // tests for %s
 	// char *s= NULL;
 	// int len = ft_printf("%s\n", s);
 	// printf("%i\n", len);
 	// char *str = "O show tem que continuar!";
 	// len = ft_printf("%s\n", str);
 	// printf("%i\n", len);
+	// ft_printf("-----------\n");
 
-	// // tests for %%
+	// // tests for %i
+
+
+	// // tests for %
 	// ft_printf("Teste %%\n");
 	// ft_printf("%%oiee\n");
 	// ft_printf("%%\n");
