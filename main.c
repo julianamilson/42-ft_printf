@@ -26,7 +26,40 @@ int	main(void)
 	// printf("%i\n", len);
 	// ft_printf("-----------\n");
 
+	// // tests for %p
+	int var = 10;
+	ft_printf("%p ", &var);
+	printf("%p ", &var);
+
+
 	// // tests for %i
+	// ft_printf("%i ", 120000);
+	// printf("%i ", 120000);
+	// printf("%d\n", 120000);
+	// ft_printf("%i ", 012);
+	// printf("%i ", 012);
+	// printf("%d\n", 012);
+	// ft_printf("%i ", 010);
+	// printf("%i ", 010);
+	// printf("%d\n", 010);
+	// ft_printf("%i ", 033);
+	// printf("%i ", 033);
+	// printf("%d\n", 033);
+	// ft_printf("%i ", -120000);
+	// printf("%i ", -120000);
+	// printf("%d\n", -120000);
+	// ft_printf("%i ", -012);
+	// printf("%i ", -012);
+	// printf("%d\n", -012);
+	// int testInteger;
+	// testInteger = 1;
+    // while (testInteger != 0)
+	// {
+	// 	scanf("%d", &testInteger);
+    // 	printf("d Number = %d\n",testInteger);
+	// 	scanf("%i\n", &testInteger);
+    // 	printf("i Number = %i\n",testInteger);
+	// }
 
 
 	// // tests for %
