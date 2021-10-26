@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 18:31:11 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/26 17:15:41 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/26 17:25:18 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		get_c(int c);
 int		get_s(char *s);
 int		get_p(unsigned long nbr);
 int		get_d(int nbr);
+int	get_u(unsigned int nbr);
 size_t	ft_strlen(const char *str);
 char	*ft_strdup(const char *str);
 
