@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 18:31:11 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/26 00:50:20 by jmilson-         ###   ########.fr       */
+/*   Created: 2021/09/09 02:10:44 by jmilson-          #+#    #+#             */
+/*   Updated: 2021/09/10 00:21:10 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <stdlib.h>
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	unsigned char	*d;
+	unsigned char	*s;
 
-/**
- * @return return the number of characters printed (excluding the null byte).
-*/
-int		ft_printf(const char *format, ...);
-int		get_c(int c);
-int		get_s(char *s);
-int		get_p(unsigned long ptr);
-size_t	ft_strlen(const char *str);
-char	*ft_strdup(const char *str);
-char	*ft_itoa(int n);
-
-#endif
+	if (!dest && !src)
+		return (NULL);
+	d = (unsigned char *) dest;
+	s = (unsigned char *) src;
+	if (d > s)
+		while (n--)
+			d[n] = s[n];
+	else
+		ft_memcpy(d, s, n);
+	return (dest);
+}

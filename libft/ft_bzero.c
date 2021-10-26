@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_c_s.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/22 18:20:07 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/22 23:56:44 by jmilson-         ###   ########.fr       */
+/*   Created: 2021/08/26 17:04:45 by jmilson-          #+#    #+#             */
+/*   Updated: 2021/09/08 16:51:09 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	get_c(int c)
+void	ft_bzero(void *str, size_t n)
 {
-	int	len;
-
-	len = write (1, &c, 1);
-	return (len);
-}
-
-int	get_s(char *s)
-{
-	int	len;
-
-	if (!s)
-	{
-		len = write (1, "(null)", (6 * sizeof(char)));
-		return(len);
-	}
-	len = write (1, s, ft_strlen(s));
-	return (len);
+	ft_memset(str, '\0', n);
 }

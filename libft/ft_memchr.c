@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 18:31:11 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/26 00:50:20 by jmilson-         ###   ########.fr       */
+/*   Created: 2021/09/03 20:52:16 by jmilson-          #+#    #+#             */
+/*   Updated: 2021/09/08 17:16:13 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <stdlib.h>
+void	*ft_memchr(const void *str, int c, size_t n)
+{
+	unsigned char	*s;
+	size_t			i;
 
-/**
- * @return return the number of characters printed (excluding the null byte).
-*/
-int		ft_printf(const char *format, ...);
-int		get_c(int c);
-int		get_s(char *s);
-int		get_p(unsigned long ptr);
-size_t	ft_strlen(const char *str);
-char	*ft_strdup(const char *str);
-char	*ft_itoa(int n);
-
-#endif
+	i = 0;
+	s = (unsigned char *)str;
+	while (i < n)
+	{
+		if (s[i] == (unsigned char)c)
+			return ((void *)&s[i]);
+		i++;
+	}
+	return (NULL);
+}

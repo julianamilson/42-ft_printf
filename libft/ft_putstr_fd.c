@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 18:31:11 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/26 00:50:20 by jmilson-         ###   ########.fr       */
+/*   Created: 2021/09/16 01:52:30 by jmilson-          #+#    #+#             */
+/*   Updated: 2021/09/18 03:53:31 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <stdlib.h>
-
-/**
- * @return return the number of characters printed (excluding the null byte).
-*/
-int		ft_printf(const char *format, ...);
-int		get_c(int c);
-int		get_s(char *s);
-int		get_p(unsigned long ptr);
-size_t	ft_strlen(const char *str);
-char	*ft_strdup(const char *str);
-char	*ft_itoa(int n);
-
-#endif
+void	ft_putstr_fd(char *s, int fd)
+{
+	write (fd, s, ft_strlen(s));
+}

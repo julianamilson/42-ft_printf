@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 18:31:11 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/26 00:50:20 by jmilson-         ###   ########.fr       */
+/*   Created: 2021/09/08 01:51:17 by jmilson-          #+#    #+#             */
+/*   Updated: 2021/09/15 19:26:03 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <stdlib.h>
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
+{
+	size_t	i;
+	size_t	j;
 
-/**
- * @return return the number of characters printed (excluding the null byte).
-*/
-int		ft_printf(const char *format, ...);
-int		get_c(int c);
-int		get_s(char *s);
-int		get_p(unsigned long ptr);
-size_t	ft_strlen(const char *str);
-char	*ft_strdup(const char *str);
-char	*ft_itoa(int n);
-
-#endif
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0' && i < dstsize)
+		i++;
+	while (((i + j + 1) < dstsize) && src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	if (i < dstsize)
+		dest[i + j] = '\0';
+	return (i + ft_strlen(src));
+}

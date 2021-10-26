@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   get_c_s.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 18:31:11 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/26 00:50:20 by jmilson-         ###   ########.fr       */
+/*   Created: 2021/10/22 18:20:07 by jmilson-          #+#    #+#             */
+/*   Updated: 2021/10/26 00:53:59 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <stdlib.h>
+int	get_c(int c)
+{
+	int	len;
 
-/**
- * @return return the number of characters printed (excluding the null byte).
-*/
-int		ft_printf(const char *format, ...);
-int		get_c(int c);
-int		get_s(char *s);
-int		get_p(unsigned long ptr);
-size_t	ft_strlen(const char *str);
-char	*ft_strdup(const char *str);
-char	*ft_itoa(int n);
+	len = write (1, &c, 1);
+	return (len);
+}
 
-#endif
+int	get_s(char *s)
+{
+	int	len;
+
+	if (!s)
+	{
+		len = write (1, "(null)", (6 * sizeof(char)));
+		return (len);
+	}
+	len = write (1, s, ft_strlen(s));
+	return (len);
+}
