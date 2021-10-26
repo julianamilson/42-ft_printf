@@ -27,12 +27,19 @@ int	main(void)
 	// ft_printf("-----------\n");
 
 	// // tests for %p
-	int var = 10;
-	ft_printf("%p ", &var);
-	printf("%p ", &var);
+	// int var = 10;
+	// ft_printf("%p ", 0);
+	// printf("%p ", 0);
 
+	// tests for %d
+	int v = -2147483648;
+	printf("%d ", v);
+	ft_printf("%d\n", v);
 
 	// // tests for %i
+	// int v = 10;
+	// printf("%i\n", "7D0");
+	// printf("%d\n", "7D0");
 	// ft_printf("%i ", 120000);
 	// printf("%i ", 120000);
 	// printf("%d\n", 120000);

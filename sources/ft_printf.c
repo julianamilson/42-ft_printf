@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 18:09:36 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/24 00:39:11 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/26 15:25:46 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ static int	get_flag(const char *format, va_list argument)
 	len = 0;
 	if (*format == 'c')
 		len = get_c(va_arg(argument, int));
-	if (*format == 's')
+	else if (*format == 's')
 		len = get_s(va_arg(argument, char *));
-	if (*format == 'p')
+	else if (*format == 'p')
 		len = get_p(va_arg(argument, unsigned long));
-
-	if (*format == '%')
+	else if (*format == 'd' || *format == 'i')
+		len = get_d(va_arg(argument, int));
+	else if (*format == '%')
 		len = write(1, format, 1);
 	return (len);
 }
