@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 18:31:11 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/26 00:50:20 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/26 14:16:44 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@
 int		ft_printf(const char *format, ...);
 int		get_c(int c);
 int		get_s(char *s);
-int		get_p(unsigned long ptr);
+int		get_p(unsigned long nbr);
+int		get_d(int nbr);
 size_t	ft_strlen(const char *str);
 char	*ft_strdup(const char *str);
 char	*ft_itoa(int n);
