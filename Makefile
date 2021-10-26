@@ -6,7 +6,7 @@
 #    By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/19 21:33:30 by jmilson-          #+#    #+#              #
-#    Updated: 2021/10/26 00:47:49 by jmilson-         ###   ########.fr        #
+#    Updated: 2021/10/26 01:06:00 by jmilson-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,8 @@ AR = ar rcs
 
 FT = ft_printf.c \
 		get_c_s.c \
-		get_d.c \
-		get_p.c
+		get_p.c \
+		get_d.c
 
 SRCS = $(addprefix sources/,$(FT))
 

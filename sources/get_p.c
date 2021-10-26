@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 19:27:43 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/24 00:35:15 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/26 13:51:58 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ static char	*translate(unsigned long ptr, char *rmdr_str, size_t rmdr_len)
 		rmdr_str[--rmdr_len] = base[ptr % 16];
 		ptr = ptr / 16;
 	}
+	free(base);
 	return (rmdr_str);
 }
 
@@ -46,5 +47,6 @@ int	get_p(unsigned long ptr)
 	rmdr_str = translate(ptr, rmdr_str, rmdr_len);
 	printed_len = write(1, "0x", 2);
 	printed_len += write(1, rmdr_str, ft_strlen(rmdr_str) * sizeof(char));
+	free(rmdr_str);
 	return (printed_len);
 }
