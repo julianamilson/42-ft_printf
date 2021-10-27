@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 19:27:30 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/27 15:56:24 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/27 16:32:30 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ static int	converter(unsigned int nbr, int str_len)
 	char	*str;
 	int		len;
 
-	str = malloc((str_len + 1) * sizeof(char));
+	str = ft_calloc((str_len + 1), sizeof(char));
 	if (!str)
 		return (0);
-	str[str_len] = '\0';
 	if (nbr < 0)
 	{
 		str[0] = '-';

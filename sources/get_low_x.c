@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 19:27:40 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/27 15:23:25 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/27 16:31:40 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ static int	converter(unsigned int nbr, char *base, size_t rmdr_len)
 	char	*str;
 	int		printed_len;
 
-	str = malloc((rmdr_len + 1) * sizeof(char));
+	str = ft_calloc((rmdr_len + 1), sizeof(char));
 	if (!str)
 		return (0);
-	str[rmdr_len] = '\0';
 	while (nbr)
 	{
 		str[--rmdr_len] = base[nbr % 16];
