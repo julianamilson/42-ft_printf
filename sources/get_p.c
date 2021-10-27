@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 19:27:43 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/27 14:03:19 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/27 14:32:20 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	get_p(unsigned long nbr)
 
 	aux = nbr;
 	if (aux == 0)
-		return (write(1, "(nil)", sizeof(char) * 5));
+		return (write(1, "0x0", sizeof(char) * 3));
 	rmdr_len = 0;
 	while (aux)
 	{
