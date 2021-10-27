@@ -6,13 +6,13 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 19:27:30 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/26 17:05:41 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/27 14:04:18 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	translate(int nbr, int str_len)
+static int	converter(int nbr, int str_len)
 {
 	char	*str;
 	int		len;
@@ -57,7 +57,7 @@ int	get_d(int nbr)
 			aux = aux / 10;
 			str_len++;
 		}
-		len = translate(nbr, str_len);
+		len = converter(nbr, str_len);
 	}
 	return (len);
 }
