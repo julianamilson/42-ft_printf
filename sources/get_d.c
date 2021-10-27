@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 19:27:30 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/27 14:04:18 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/27 15:10:11 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,11 @@ static int	converter(int nbr, int str_len)
 
 int	get_d(int nbr)
 {
-	int		aux;
-	int		len;
-	int		str_len;
+	int	aux;
+	int	str_len;
 
 	if (nbr == 0)
-		len = write(1, "0", 1);
+		return (write(1, "0", 1));
 	else if (nbr == -2147483648)
 		return (write(1, "-2147483648", 11 * sizeof(char)));
 	else
@@ -57,7 +56,6 @@ int	get_d(int nbr)
 			aux = aux / 10;
 			str_len++;
 		}
-		len = converter(nbr, str_len);
 	}
-	return (len);
+	return (converter(nbr, str_len));
 }

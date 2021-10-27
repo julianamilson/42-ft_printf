@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 19:27:30 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/27 14:03:36 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/27 15:13:34 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,10 @@ static int	converter(unsigned int nbr, int str_len)
 int	get_u(unsigned int nbr)
 {
 	unsigned int	aux;
-	int				len;
 	int				str_len;
 
 	if (nbr == 0)
-		len = write(1, "0", 1);
+		return (write(1, "0", 1));
 	else
 	{
 		aux = nbr;
@@ -55,7 +54,6 @@ int	get_u(unsigned int nbr)
 			aux = aux / 10;
 			str_len++;
 		}
-		len = converter(nbr, str_len);
 	}
-	return (len);
+	return (converter(nbr, str_len));
 }
