@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 19:27:43 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/27 16:32:00 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/27 18:01:42 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	converter(unsigned long nbr, char *base, size_t rmdr_len)
 int	get_p(unsigned long nbr)
 {
 	unsigned long	aux;
-	int			rmdr_len;
+	int				rmdr_len;
 
 	aux = nbr;
 	if (aux == 0)
