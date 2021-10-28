@@ -6,13 +6,13 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 19:27:40 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/27 16:31:40 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/28 15:29:58 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	converter(unsigned int nbr, char *base, size_t rmdr_len)
+static int	converter(unsigned int nbr, char *base, int rmdr_len)
 {
 	char	*str;
 	int		printed_len;

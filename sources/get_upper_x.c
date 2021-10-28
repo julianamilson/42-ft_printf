@@ -6,13 +6,13 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 19:27:40 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/27 16:32:52 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/10/28 15:30:27 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	converter(unsigned int nbr, char *base, size_t rmdr_len)
+static int	converter(unsigned int nbr, char *base, int rmdr_len)
 {
 	char	*str;
 	int		printed_len;
@@ -33,7 +33,7 @@ static int	converter(unsigned int nbr, char *base, size_t rmdr_len)
 int	get_upper_x(unsigned int nbr)
 {
 	unsigned int	aux;
-	size_t			rmdr_len;
+	int				rmdr_len;
 
 	aux = nbr;
 	if (aux == 0)

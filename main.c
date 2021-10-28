@@ -32,12 +32,13 @@ int	main(void)
 	// printf("%p ", 0);
 
 	// // test %u
-	printf("%u\t", 4294967296);
-	ft_printf("%u\t", 4294967296);
+	// printf("%u\t", 4294967296);
+	// ft_printf("%u\t", 4294967296);
+
 	// // tests for %d
-	// int v = -2147483648;
-	// printf("%d ", v);
-	// ft_printf("%d\n", v);
+	int v = -2147483;
+	printf("%x ", v);
+	ft_printf("%x\n", v);
 	// printf(" %p %p ", 0, 0);
 	// ft_printf(" %p %p ", 0, 0);
 	// // tests for %i
