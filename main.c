@@ -16,6 +16,8 @@ int	main(void)
 	// 	printf(" %c\n", i);
 	// }
 	// ft_printf("-----------\n");
+	ft_printf("%u\t",-11);
+	printf("%u\n", -11);
 
 	// // tests for %s
 	// char *s= NULL;
@@ -37,8 +39,8 @@ int	main(void)
 
 	// // tests for %d
 	int v = -2147483;
-	printf("%x ", v);
-	ft_printf("%x\n", v);
+	// printf("%x ", v);
+	// ft_printf("%x\n", v);
 	// printf(" %p %p ", 0, 0);
 	// ft_printf(" %p %p ", 0, 0);
 	// // tests for %i
