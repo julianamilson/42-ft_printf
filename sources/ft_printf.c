@@ -48,7 +48,7 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			len += get_flag(format++, arguments);
+			len += get_flag(format, arguments);
 		}
 		else
 		{
