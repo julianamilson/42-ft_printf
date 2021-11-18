@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 18:09:36 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/10/26 18:05:14 by jmilson-         ###   ########.fr       */
+/*   Updated: 2021/11/17 21:02:26 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			len += get_flag(format, arguments);
+			len += get_flag(format++, arguments);
 		}
 		else
 		{
