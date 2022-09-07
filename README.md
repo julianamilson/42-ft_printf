@@ -24,7 +24,7 @@ git clone https://github.com/julianamilson/42-ft_printf/
 cd 42-ft_printf && make
 ```
 
-3. It's ready to be used! In order to import it to your project, call `ft_printf`'s path.
+3. It's ready to be used! In order to import it to your project, call `ft_printf.h`'s path.
 
 4. Won't use it anymore? Here you go!
 ```bash
